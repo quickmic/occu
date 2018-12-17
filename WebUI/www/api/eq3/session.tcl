@@ -1,1 +1,1 @@
-/opt/hm/www/tcl/eq3/session.tcl
+/www/tcl/eq3/session.tcl

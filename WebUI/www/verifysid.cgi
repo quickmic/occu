@@ -1,1 +1,1 @@
-/opt/hm/www/tcl/eq3_old/verifysid.cgi
+/www/tcl/eq3_old/verifysid.cgi

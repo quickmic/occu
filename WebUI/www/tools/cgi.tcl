@@ -1,1 +1,1 @@
-/opt/hm/www/tcl/extern/cgi.tcl
+/www/tcl/extern/cgi.tcl

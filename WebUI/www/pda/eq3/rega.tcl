@@ -1,1 +1,1 @@
-/opt/hm/www/tcl/eq3/rega.tcl
+/www/tcl/eq3/rega.tcl

@@ -1,1 +1,1 @@
-/opt/hm/www/tcl/eq3_old/user.tcl
+/www/tcl/eq3_old/user.tcl
