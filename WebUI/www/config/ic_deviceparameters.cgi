@@ -1214,29 +1214,6 @@ proc put_Header {} {
 
             }
           }
-
-          "UP_TO_DATE" {
-            if {[string equal $dev_descr(TYPE) "HmIP-SWSD"] == 1} {
-              append fw_update_rows "<tr id=\"swsdHintCheckDevice\" class=\"hidden\"><td colspan=\"2\"><span class=\"attention\">\${checkSmokeDetectorSelfTest}</span></td></tr>"
-
-              append fw_update_rows "<script \"type=text/javascript\">"
-
-                append fw_update_rows "var smokeTestDone = homematic(\"Interface.getMetadata_crRFD\", {"
-                  append fw_update_rows "'interface': 'HmIP-RF',"
-                  append fw_update_rows "'objectId' : '$dev_descr(ADDRESS):1',"
-                  append fw_update_rows "'dataId' : 'smokeTestDone'"
-                append fw_update_rows "});"
-
-                # smokeTestDone is the result returned from Interface.getMetadata_crRFD
-                # It's a string and can be '', 'false', 'true'
-                append fw_update_rows "if(smokeTestDone == \"false\") {"
-                  append fw_update_rows "jQuery(\"#swsdHintCheckDevice\").show();"
-                append fw_update_rows "}"
-
-              append fw_update_rows "</script>"
-
-            }
-          }
         }
       } else {
         # This should never be reached....

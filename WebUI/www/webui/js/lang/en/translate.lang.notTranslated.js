@@ -57,12 +57,6 @@ jQuery.extend(true,langJSON, {
     "Bitte nutzen sie die Virtuellen Fernbedienungskan%E4le erst, nachdem die Konfigurationsdaten %FCbertragen wurden. " +
     "Bestehende Programme und Verkn%FCpfungen werden von den %C4nderungen nicht beeinflusst.",
 
-    "comment" : "This is for the Smoke-Detector certification",
-
-    "checkSmokeDetectorSelfTest" : "en* Bitte vergewissern Sie sich, dass der Rauchmelder korrekt arbeitet, indem Sie einen Selbsttest durch Druck auf die Bedientaste durchf%FChren!",
-    "hintActivateDetectorSelfTest" : "en* Das Firmware-Update wurde erfolgreich aufgespielt. ",
-    "hintReInclusionDetectorFailed" : "en* Beim Aufspielen des Firmware-Updates ist ein Problem aufgetreten. ",
-
     "noMoreKeys" : ""
   }
 });
