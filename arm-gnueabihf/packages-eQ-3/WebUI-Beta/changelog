@@ -2,6 +2,59 @@
 ReGaHss ChangeLog
 -----------------
 
+2019-04-29 Jens Maus <mail@jens-maus.de>
+
+  * fixed another minor timer module issue where during winter->summer dst
+    change a periodic timer could have been executed twice with the same
+    begin time. In addition, even timers outside the start/stop times of
+    the dst change were incorrectly executed.
+
+2019-04-25 Jens Maus <mail@jens-maus.de>
+
+  * fixed another issue in the begin time calculation of period
+    timers which could result in unexpected segfaults under certain
+    conditions.
+
+2019-04-24 Jens Maus <mail@jens-maus.de>
+
+  * the history buffer size can now be specified/modified using
+    rega.conf by specifying a HistoryBufferSize setting.
+
+2019-04-17 Jens Maus <mail@jens-maus.de>
+
+  * implemented new system.SunAzimuth() and system.SunAltitude() script
+    functions which will return the current sun position in degrees
+    relative to the current position and time.
+
+2019-04-12 Jens Maus <mail@jens-maus.de>
+
+  * integrated another time module fix where upon startup all periodic
+    timers fired a single time even though their time didn't match the
+    actual time they should fire.
+
+2019-04-11 Jens Maus <mail@jens-maus.de>
+
+  * moved scheduler thread startup to be started earlier so that timer
+    evaluations can be performed more early.
+  * fixed minor bug where in case a system variable was connected to
+    a channel this reference wasn't cleared correctly upon removal of
+    the channel/device (https://homematic-forum.de/forum/viewtopic.php?f=31&t=50077)
+
+2019-04-10 Jens Maus <mail@jens-maus.de>
+
+  * removed 'Server' HTTP response header to prevent any detailed web
+    server system type analyses.
+
+2019-04-02 Jens Maus <mail@jens-maus.de>
+
+  * fixed bug in the astro day/night calculation routines where on a DST
+    switch day from midnight till the switch time and incorrect sunrise
+    or sunset time was returned.
+  * add timestamp to console output and take care that output is properly
+    synchronized.
+
+#### R1.00.0388.0206 (occu: XXXXXXX) Release ##############################
+
 2019-03-21 Jens Maus <mail@jens-maus.de>
 
   * fixed DST/non-DST switching issues in timer module which could have
